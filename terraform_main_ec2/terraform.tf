@@ -6,11 +6,12 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "nareshawsdevvvv"
-    key    = "ec2/terraform.tfstate"
-    region = "us-east-1"
-  }
+  # Comment out this entire backend section for local state
+  # backend "s3" {
+  #   bucket = "nareshawsdevvvv"
+  #   key    = "ec2/terraform.tfstate"
+  #   region = "us-east-1"
+  # }
 
   required_version = ">= 1.6.3"
 }
